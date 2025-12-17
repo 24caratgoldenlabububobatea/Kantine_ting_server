@@ -6,10 +6,7 @@ import datetime
 app = Flask(__name__)
 app.secret_key = 'hemmlig_nokkel'
 
-
-# ---------------------------
 #  ADDED FROM THE FIRST FILE
-# ---------------------------
 
 regular_meals = [
     {"name": "Pizza med ost", "image": "/bilder/pizza.png"},
@@ -77,14 +74,9 @@ def varer():
 def kontakt():
     return render_template("kontakt.html")
 
-# ---------------------------
 # END OF ADDED PART
-# ---------------------------
 
-
-# ---------------------------
 # DATABASE FUNCTIONS
-# ---------------------------
 
 def get_conn():
     return mysql.connector.connect(
@@ -94,10 +86,7 @@ def get_conn():
         database="eksempel_db"
     )
 
-
-# ---------------------------
 # REGISTER
-# ---------------------------
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -123,9 +112,7 @@ def register():
     return render_template("register.html", form=form)
 
 
-# ---------------------------
 # LOGIN
-# ---------------------------
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -151,6 +138,3 @@ def login():
             form.username.errors.append("Feil brukernavn eller passord")
 
     return render_template("login.html", form=form)
-
-if __name__ == "__main__":
-    app.run(debug=True)

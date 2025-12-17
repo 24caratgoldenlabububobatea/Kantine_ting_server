@@ -1,24 +1,26 @@
 {% extends "base.html" %}
 
 {% block head %}
+
     <title>Hjemmeside</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/css.css') }}">
 {% endblock %}
 
-{% block body %} 
-    <a href="/logo" class="logo"></a> <!-- Shapes set up in a way that they won't overlap and to make it easier to add text. also added class for css --> 
-        <section class="content">
-            <div class="shapes">
-                <div class="shape red"></div>
-                <div class="shape black"></div>
-                <div class="shape white">
-                <div class="kantine-info">
-    <h1>Akademiet VGS Kantine</h1>
-    <p>Dette er den offisielle nettsiden for skolekantina ved Akademiet VGS.</p>
-    <p>Her kan du enkelt se hva som serveres i kantina hver dag.</p>
-</div>
+{% block body %}
+<a href="/" class="logo"></a>
 
-            </div>
-        </section>
+<section class="content">
+    <div class="shapes">
+
+        <div class="shape red"></div>
+        <div class="shape black"></div>
+        <div class="shape white"></div>
+
     </div>
-{% endblock %} 
+
+    <div class="kantine-info">
+        <h1>Akademiet VGS Kantine</h1>
+        <p>Dette er den offisielle nettsiden for skolekantina ved Akademiet VGS.</p>
+        <p>Her kan du enkelt se hva som serveres i kantina hver dag.</p>
+    </div>
+</section>
+{% endblock %}
